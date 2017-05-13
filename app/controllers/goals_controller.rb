@@ -1,6 +1,13 @@
 class GoalsController < ApplicationController
   def index
-    @goals = Goal.all
+    if params[ :order_by ]
+      order_by = params[ :order_by ]
+      order = params[ :order ] == 'desc' ? 'desc' : 'asc'
+
+      @goals = Goal.order( { order_by => order } )
+    else
+      @goals = Goal.all
+    end
   end
 
   def show
