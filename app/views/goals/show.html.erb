@@ -11,6 +11,9 @@
     <% else %>
       <h3>Whoops! This Goal does not have any tasks.</h3>
     <% end %>
+    <a href="<%= new_goal_task_path( @goal ) %>">
+      <button>Create New Task</button>
+    </a>
 <% else %>
     <h2>Whoops! Looks like this goal doesn't exist.</h2>
 <% end %>
