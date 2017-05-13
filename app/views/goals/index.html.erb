@@ -1,0 +1,9 @@
+<h1>Goals#index</h1>
+<% if @goals && !@goals.empty? %>
+    <% @goals.each do | g | %>
+        <article>
+            <h2><%= g.name %></h2>
+            <p><%= g.description %></p>
+        </article>
+    <% end %>
+<% end %>
