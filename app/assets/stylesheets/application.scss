@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ // VENDOR
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+
+@import 'goals';
+@import 'tasks';
