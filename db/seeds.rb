@@ -10,5 +10,18 @@
     name = "Goal ##{i + 1}"
     description = "This is the description for Goal ##{i + 1}."
 
-    Goal.create( { :name => name, :description => description } )
+    goal = Goal.new( { :name => name, :description => description } )
+
+    goal.save
+
+    id = goal.id
+
+    (1..5).to_a.sample.times do |j|
+      t = Task.new
+
+      t.name = "Task ##{i}.#{j}"
+      t.goal_id = id
+
+      t.save
+    end
 end
