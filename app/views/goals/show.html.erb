@@ -2,6 +2,15 @@
 <% if @goal %>
     <h2><%= @goal.name %></h2>
     <p><%= @goal.description %></p>
+    <% if !@goal.tasks.empty? %>
+      <ul>
+      <% @goal.tasks.each do | t | %>
+        <li><%= t.name %></li>
+      <% end %>
+      </ul>
+    <% else %>
+      <h3>Whoops! This Goal does not have any tasks.</h3>
+    <% end %>
 <% else %>
     <h2>Whoops! Looks like this goal doesn't exist.</h2>
 <% end %>
