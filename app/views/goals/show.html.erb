@@ -1,0 +1,7 @@
+<h1>Goals#show</h1>
+<% if @goal %>
+    <h2><%= @goal.name %></h2>
+    <p><%= @goal.description %></p>
+<% else %>
+    <h2>Whoops! Looks like this goal doesn't exist.</h2>
+<% end %>
