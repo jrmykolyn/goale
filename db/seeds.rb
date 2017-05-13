@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times do |i|
+    name = "Goal ##{i + 1}"
+    description = "This is the description for Goal ##{i + 1}."
+
+    Goal.create( { :name => name, :description => description } )
+end
