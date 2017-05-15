@@ -1,12 +1,16 @@
-<h1>Goals#index</h1>
-<% if @goals && !@goals.empty? %>
-    <% @goals.each do | g | %>
-      <a href="<%= goal_path( g ) %>">
-        <article>
-            <h2><%= g.name %></h2>
-            <p><%= g.description %></p>
-            <p>Total Tasks: <strong><%= g.tasks.length %></strong></p>
-        </article>
-      </a>
+<section class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <h1>Goals#index</h1>
+    <% if @goals && !@goals.empty? %>
+        <% @goals.each do | g | %>
+          <a href="<%= goal_path( g ) %>">
+            <article>
+                <h2><%= g.name %></h2>
+                <p><%= g.description %></p>
+                <p>Total Tasks: <strong><%= g.tasks.length %></strong></p>
+            </article>
+          </a>
+        <% end %>
     <% end %>
-<% end %>
+  </div>
+</section>
