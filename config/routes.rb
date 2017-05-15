@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  # Invoke `GoalsController#index` for `/` route.
+  root to: 'goals#index'
+
   resources :goals, only: [ :index, :show, :new, :create ] do
     resources :tasks, only: [ :new, :create ]
   end
